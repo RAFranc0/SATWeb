@@ -16,6 +16,7 @@ public class UsuariosController : Controller
     
     public IActionResult CadastrarUsuario()
     {
+        ViewBag.Departamentos = _satdb.Departamentos.ToList();
         return View();
     }
     public IActionResult ExcluirUsuario()
@@ -27,16 +28,17 @@ public class UsuariosController : Controller
         return View();
     }
     
-    [HttpGet("listar")]
-    public async Task<IActionResult> Listar()
+    [HttpGet("listarusuarios")]
+    public async Task<IActionResult> ListarUsuarios()
     {
         var listaDeUsuarios = await _satdb.Usuarios.ToListAsync();
         return View("ListarUsuarios", listaDeUsuarios);
     }
 
-    [HttpPost("cadastrar")]
+    [HttpPost("cadastrarusuario")]
     public async Task<IActionResult> Cadastrar(UsuarioModel usuario)
     {
+        
         if (!ModelState.IsValid)
         {
             return View("CadastrarUsuario", usuario); 
@@ -55,7 +57,7 @@ public class UsuariosController : Controller
         }
     }
 
-    [HttpPost("excluir")]
+    [HttpPost("excluirusuario")]
     public async Task<IActionResult> Excluir(int id)
     {
         var usuario = await _satdb.Usuarios.FindAsync(id);
@@ -76,7 +78,7 @@ public class UsuariosController : Controller
         }
     }
     
-    [HttpGet("editar/{id}")]
+    [HttpGet("editarusuario/{id}")]
     public async Task<IActionResult> Editar(int id)
     {
         var usuario = await _satdb.Usuarios.FindAsync(id);
@@ -87,7 +89,7 @@ public class UsuariosController : Controller
         return View("EditarUsuario", usuario);
     }
 
-    [HttpPost("editar/{id}")]
+    [HttpPost("editarusuario/{id}")]
     public async Task<IActionResult> Editar(int id, UsuarioModel usuarioAtualizado)
     {
         if (id != usuarioAtualizado.Id)

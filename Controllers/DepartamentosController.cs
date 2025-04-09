@@ -13,6 +13,17 @@ public class DepartamentosController : Controller
     {
         _satdb = satdb;
     }
+    
+    [HttpGet]
+    public async Task<IActionResult> ObterDepartamento(int id)
+    {
+        var departamento = await _satdb.Departamentos.FindAsync(id);
+        if (departamento == null)
+        {
+            return NotFound();
+        }
+        return Json(departamento);
+    }
 
     [HttpGet]
     public IActionResult CadastrarDepartamento()
@@ -21,25 +32,50 @@ public class DepartamentosController : Controller
     }
 
     [HttpGet]
-    public IActionResult EditarDepartamento()
+    public async Task<IActionResult> EditarDepartamento(int? id = null, bool error = false)
     {
+        var listaDeDepartamentos = await _satdb.Departamentos.ToListAsync();
+        DepartamentoModel departamentoSelecionado = null;
+        
+        if (id.HasValue)
+        {
+            departamentoSelecionado = await _satdb.Departamentos.FindAsync(id);
+        }
+        
+        ViewBag.Departamentos = listaDeDepartamentos;
+        ViewBag.DepartamentoSelecionado = departamentoSelecionado;
+        ViewBag.Erro = error;
+        
         return View("EditarDepartamento");
     }
-
+    
     [HttpGet]
-    public IActionResult ExcluirDepartamento()
+    public async Task<IActionResult> ExcluirDepartamento(int? id = null, bool error = false)
     {
+        var listaDeDepartamentos = await _satdb.Departamentos.ToListAsync();
+        DepartamentoModel departamentoSelecionado = null;
+
+        if (id.HasValue)
+        {
+            departamentoSelecionado = await _satdb.Departamentos.FindAsync(id);
+        }
+
+        ViewBag.Departamentos = listaDeDepartamentos;
+        ViewBag.DepartamentoSelecionado = departamentoSelecionado;
+        ViewBag.Erro = error;
+
         return View("ExcluirDepartamento");
     }
+
     
-    [HttpGet("listar")]
+    [HttpGet]
     public async Task<IActionResult> ListarDepartamentos()
     {
-        var listaDeDepartamentos = _satdb.Departamentos.ToListAsync();
+        var listaDeDepartamentos = await _satdb.Departamentos.ToListAsync();
         return View(listaDeDepartamentos);
     }
     
-    [HttpPost("cadastrar")]
+    [HttpPost]
     public async Task<IActionResult> Cadastrar(DepartamentoModel departamento)
     {
         if (!ModelState.IsValid)
@@ -60,7 +96,7 @@ public class DepartamentosController : Controller
         }
     }
     
-    [HttpPost("excluir")]
+    [HttpPost]
     public async Task<IActionResult> Excluir(int id)
     {
         var departamento = await _satdb.Departamentos.FindAsync(id);
@@ -80,40 +116,31 @@ public class DepartamentosController : Controller
             return RedirectToAction("ExcluirDepartamento", new { id, error = true });
         }
     }
-    
-    [HttpGet("editar/{id}")]
-    public async Task<IActionResult> Editar(int id)
-    {
-        var departamento = await _satdb.Departamentos.FindAsync(id);
-        if (departamento == null)
-        {
-            return NotFound();
-        }
-        return View("EditarDepartamento", departamento);
-    }
 
-    [HttpPost("editar/{id}")]
+    [HttpPost]
     public async Task<IActionResult> Editar(int id, DepartamentoModel departamentoAtualizado)
     {
         if (id != departamentoAtualizado.Id)
-        {
             return BadRequest();
-        }
+
 
         if (!ModelState.IsValid)
-        {
             return View("EditarDepartamento", departamentoAtualizado);
-        }
+        
+        var departamentoExistente = await _satdb.Departamentos.FindAsync(id);
+        if (departamentoExistente == null)
+            return NotFound();
 
         try
         {
-            _satdb.Update(departamentoAtualizado);
+            departamentoExistente.Nome = departamentoAtualizado.Nome;
             await _satdb.SaveChangesAsync();
-            return RedirectToAction("ListarDepartamentos");
+            TempData["Mensagem"] = "Departamento atualizado com sucesso!";
+            return RedirectToAction("ListarDepartamentos", "Departamentos");
         }
         catch (DbUpdateException ex)
         {
-            ModelState.AddModelError("", "Erro ao atualizar.");
+            ModelState.AddModelError("", "Erro ao atualizar o departamento.");
             return View("EditarDepartamento", departamentoAtualizado);
         }
     }

@@ -1,7 +1,16 @@
+@model DepartamentoModel
 @{
     ViewData["Title"] = "Cadastrar Departamento";
 }
 
 <div class="container text-center">
     <h1 class="display-4">Cadastrar Departamento</h1>
+    <form method="post" asp-controller="Departamentos" asp-action="Cadastrar">
+        <div class="mb-3">
+            <label class="form-label">Nome do novo departamento:</label>
+            <input type="text" class="form-control" placeholder="Ex: Financeiro" asp-for="Nome" required/>
+        </div>
+        
+        <button class="btn btn-outline-dark" type="submit">Cadastrar</button>
+    </form>
 </div>

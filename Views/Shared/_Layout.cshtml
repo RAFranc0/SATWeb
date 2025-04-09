@@ -14,14 +14,37 @@
         <div class="container-fluid">
             <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown button
+                    Menu Principal
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="dropdown-item active" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Chamados</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="#">Novo Chamado</a></li>
+                            <li><a class="dropdown-item" href="#">Listar Chamados</a></li>
+                        </ul>
+                    </li>
+
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Usuários</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" asp-controller="Usuarios" asp-action="CadastrarUsuario">Cadastrar Usuário</a></li>
+                            <li><a class="dropdown-item" asp-controller="Usuarios" asp-action="EditarUsuario">Editar Usuário</a></li>
+                            <li><a class="dropdown-item" asp-controller="Usuarios" asp-action="ExcluirUsuario">Excluir Usuário</a></li>
+                            <li><a class="dropdown-item" asp-controller="Usuarios" asp-action="ListarUsuarios">Listar Usuários</a></li>
+                        </ul>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Departamento</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" asp-controller="Departamentos" asp-action="CadastrarDepartamento">Cadastrar Departamento</a></li>
+                            <li><a class="dropdown-item" asp-controller="Departamentos" asp-action="EditarDepartamento">Editar Departamento</a></li>
+                            <li><a class="dropdown-item" asp-controller="Departamentos" asp-action="ExcluirDepartamento">Excluir Departamento</a></li>
+                            <li><a class="dropdown-item" asp-controller="Departamentos" asp-action="ListarDepartamentos">Listar Departamentos</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>

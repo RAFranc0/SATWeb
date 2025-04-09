@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\editarDepartamento.js",
+      "PackagePath": "staticwebassets\\js\\editarDepartamento.js"
+    },
+    {
+      "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\excluirDepartamento.js",
+      "PackagePath": "staticwebassets\\js\\excluirDepartamento.js"
+    },
+    {
       "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

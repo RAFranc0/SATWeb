@@ -140,6 +140,7 @@ C:\Users\Raul\Desktop\Senac PI2\SATWeb\obj\Debug\net8.0\SATWeb.csproj.CoreCompil
 C:\Users\Raul\Desktop\Senac PI2\SATWeb\obj\Debug\net8.0\SATWeb.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Raul\Desktop\Senac PI2\SATWeb\obj\Debug\net8.0\SATWeb.RazorAssemblyInfo.cache
 C:\Users\Raul\Desktop\Senac PI2\SATWeb\obj\Debug\net8.0\SATWeb.RazorAssemblyInfo.cs
+C:\Users\Raul\Desktop\Senac PI2\SATWeb\obj\Debug\net8.0\SATWeb.sourcelink.json
 C:\Users\Raul\Desktop\Senac PI2\SATWeb\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Raul\Desktop\Senac PI2\SATWeb\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Raul\Desktop\Senac PI2\SATWeb\obj\Debug\net8.0\staticwebassets\msbuild.SATWeb.Microsoft.AspNetCore.StaticWebAssets.props

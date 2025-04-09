@@ -26,6 +26,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Raul\Desktop\Senac PI2\SATWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Raul/Desktop/Senac PI2/SATWeb/Views/Departamentos/CadastrarDepartamento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xDYWRhc3RyYXJEZXBhcnRhbWVudG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raul/Desktop/Senac PI2/SATWeb/Views/Departamentos/EditarDepartamento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xFZGl0YXJEZXBhcnRhbWVudG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raul/Desktop/Senac PI2/SATWeb/Views/Departamentos/ExcluirDepartamento.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xFeGNsdWlyRGVwYXJ0YW1lbnRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raul/Desktop/Senac PI2/SATWeb/Views/Departamentos/ListarDepartamentos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xMaXN0YXJEZXBhcnRhbWVudG9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Raul/Desktop/Senac PI2/SATWeb/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,6 +56,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Raul/Desktop/Senac PI2/SATWeb/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raul/Desktop/Senac PI2/SATWeb/Views/Usuarios/CadastrarUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcQ2FkYXN0cmFyVXN1YXJpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raul/Desktop/Senac PI2/SATWeb/Views/Usuarios/EditarUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWRpdGFyVXN1YXJpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raul/Desktop/Senac PI2/SATWeb/Views/Usuarios/ExcluirUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRXhjbHVpclVzdWFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raul/Desktop/Senac PI2/SATWeb/Views/Usuarios/ListarUsuarios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcTGlzdGFyVXN1YXJpb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Raul/Desktop/Senac PI2/SATWeb/Views/_ViewImports.cshtml]
