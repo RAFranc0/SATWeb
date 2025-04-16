@@ -17,8 +17,16 @@
       "PackagePath": "staticwebassets\\js\\editarDepartamento.js"
     },
     {
+      "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\editarUsuario.js",
+      "PackagePath": "staticwebassets\\js\\editarUsuario.js"
+    },
+    {
       "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\excluirDepartamento.js",
       "PackagePath": "staticwebassets\\js\\excluirDepartamento.js"
+    },
+    {
+      "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\excluirUsuario.js",
+      "PackagePath": "staticwebassets\\js\\excluirUsuario.js"
     },
     {
       "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\site.js",

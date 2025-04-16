@@ -1,7 +1,55 @@
+@model SATWeb.Models.EditarUsuarioViewModel
 @{
     ViewData["Title"] = "Editar Usuário";
 }
 
 <div class="container text-center">
     <h1 class="display-4">Editar Usuario</h1>
+
+    <!-- Seleção inicial do usuário -->
+    <div class="mb-3">
+        <label class="form-label">Selecione o usuário</label>
+        <select id="selectUsuario" class="form-select">
+            <option value="">-- Selecione --</option>
+            @foreach (var user in Model.TodosUsuarios)
+            {
+                <option value="@user.Id" 
+                        selected="@(Model.Usuario?.Id == user.Id)">
+                    @user.Nome
+                </option>
+            }
+        </select>
+    </div>
+    <button id="btnLocalizar" class="btn btn-primary">Localizar</button>
+
+    <!-- Formulário de edição -->
+    <form id="formEditar" method="post" asp-action="Editar" class="mt-4" style="display:none;">
+        <input type="hidden" asp-for="Usuario.Id" id="inputId" />
+        
+        <div class="mb-3">
+            <label asp-for="Usuario.Nome" class="form-label"></label>
+            <input asp-for="Usuario.Nome" class="form-control" id="campoNome" />
+            <span asp-validation-for="Usuario.Nome" class="text-danger"></span>
+        </div>
+        
+        <div class="mb-3">
+            <label asp-for="Usuario.DepartamentoId" class="form-label">Departamento</label>
+            <select asp-for="Usuario.DepartamentoId" class="form-select" id="campoDepartamento">
+                <option value="">-- Selecione --</option>
+                @foreach (var depto in Model.ListaDepartamentos)
+                {
+                    <option value="@depto.Id">@depto.Nome</option>
+                }
+            </select>
+            <span asp-validation-for="Usuario.DepartamentoId" class="text-danger"></span>
+        </div>
+        
+        <button type="submit" class="btn btn-danger">Atualizar</button>
+    </form>
+
+    <div id="erro" class="alert alert-danger mt-3" style="display:none;">
+        Ocorreu um erro ao buscar o usuário.
+    </div>
 </div>
+
+<script src="~/js/editarUsuario.js" asp-append-version="true"></script>

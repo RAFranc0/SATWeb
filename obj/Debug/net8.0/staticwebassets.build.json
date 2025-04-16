@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JSvozaN1qMfK7J8mRnQLBf14PM1eB3DiktqnmcysUps=",
+  "Hash": "6iq+5po6AU0muZITSaVOHjNTSv1PB6iJvmH3GCGqKwk=",
   "Source": "SATWeb",
   "BasePath": "_content/SATWeb",
   "Mode": "Default",
@@ -112,6 +112,25 @@
       "OriginalItemSpec": "wwwroot\\js\\editarDepartamento.js"
     },
     {
+      "Identity": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\editarUsuario.js",
+      "SourceId": "SATWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\",
+      "BasePath": "_content/SATWeb",
+      "RelativePath": "js/editarUsuario.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\editarUsuario.js"
+    },
+    {
       "Identity": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\excluirDepartamento.js",
       "SourceId": "SATWeb",
       "SourceType": "Discovered",
@@ -129,6 +148,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\excluirDepartamento.js"
+    },
+    {
+      "Identity": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\excluirUsuario.js",
+      "SourceId": "SATWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\",
+      "BasePath": "_content/SATWeb",
+      "RelativePath": "js/excluirUsuario.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\excluirUsuario.js"
     },
     {
       "Identity": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\site.js",
