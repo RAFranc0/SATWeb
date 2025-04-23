@@ -1,4 +1,6 @@
-namespace SATWeb.Models;
+using SATWeb.Models;
+
+namespace SATWeb.ViewModels;
 
 public class CadastroUsuarioViewModel
 {

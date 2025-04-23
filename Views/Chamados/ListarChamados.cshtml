@@ -1,0 +1,126 @@
+@model AlterarChamadoModel
+@{
+    ViewData["Title"] = "Lista de Chamados";
+}
+
+<div class="text-center">
+    <h1 class="display-4 mb-4">Lista de chamados</h1>
+
+    @if (Model.TodosChamados == null || !Model.TodosChamados.Any())
+    {
+        <div class="alert alert-info">Nenhum chamado aberto</div>
+    }
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var c in Model.TodosChamados)
+        {
+            <div class="col">
+                <div class="card h-100">
+                    <div class="card-title my-2 p-2 text-center position-relative">
+                        <h5 class="d-inline-block mb-0" id="titulo-card">Chamado @c.Id</h5>
+                        <span class="indicador-status 
+                                    @(c.Estado.ToString() == "Aberto" ? "status-aberto" :
+                                                                         c.Estado.ToString() == "Reaberto" ? "status-reaberto" :
+                                                                         "status-encerrado")">
+                        </span>
+                    </div>
+                    <div class="card-body mh-100 p-2 bg-light rounded overflow-auto">
+                        <div class="card-text"
+                             style="max-height: 150px; white-space: pre-line;">
+                            @c.Descricao
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Aberto em: @c.Data.ToString("dd/MM/yyyy HH:mm")</small>
+
+                        <div class="my-2">
+                            <!--++++++++++++++++++++++++++++++++-->
+                            <!-- Modal de reabertura de chamado -->
+                            <!--++++++++++++++++++++++++++++++++-->
+
+                            <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                    data-bs-target="#modalReabertura-@c.Id">
+                                Reabrir
+                            </button>
+
+                            <div class="modal fade" id="modalReabertura-@c.Id" data-bs-backdrop="static"
+                                 data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalReaberturaLabel-@c.Id"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="modalReaberturaLabel-@c.Id">Reabrir chamado
+                                                Nº @c.Id</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                        </div>
+                                        <form asp-controller="Chamados" asp-action="Reabrir">
+                                            @Html.AntiForgeryToken()
+                                            <div class="modal-body">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Descreva o motivo da reabertura:</label>
+                                                    <textarea class="form-control" placeholder="escreva aqui..."
+                                                              asp-for="Descricao" required></textarea>
+                                                </div>
+                                                <input type="hidden" name="id" value="@c.Id">
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                    Voltar
+                                                </button>
+                                                <button type="submit" class="btn btn-primary">Reabrir chamado</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--++++++++++++++++++++++++++++++++++-->
+                            <!-- Modal de encerramento de chamado -->
+                            <!--++++++++++++++++++++++++++++++++++-->
+
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                    data-bs-target="#modalEncerramento-@c.Id">
+                                Encerrar
+                            </button>
+
+                            <div class="modal fade" id="modalEncerramento-@c.Id" data-bs-backdrop="static"
+                                 data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalEncerramentoLabel-@c.Id"
+                                 aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="modalEncerramentoLabel-@c.Id">Encerrar o
+                                                chamado Nº @c.Id</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                        </div>
+                                        <form asp-controller="Chamados" asp-action="Encerrar">
+                                            @Html.AntiForgeryToken()
+                                            <div class="modal-body">
+                                                <div class="mb-3">
+                                                    <label class="form-label">Descreva o motivo do encerramento:</label>
+                                                    <textarea class="form-control" placeholder="escreva aqui..."
+                                                              asp-for="Descricao" required></textarea>
+                                                </div>
+                                                <input type="hidden" name="id" value="@c.Id">
+                                            </div>
+
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                    Voltar
+                                                </button>
+                                                <button type="submit" class="btn btn-primary">Encerrar chamado</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

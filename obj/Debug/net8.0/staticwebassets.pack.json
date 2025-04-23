@@ -13,20 +13,20 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\editarDepartamento.js",
-      "PackagePath": "staticwebassets\\js\\editarDepartamento.js"
+      "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\Departamentos\\editarDepartamento.js",
+      "PackagePath": "staticwebassets\\js\\Departamentos\\editarDepartamento.js"
     },
     {
-      "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\editarUsuario.js",
-      "PackagePath": "staticwebassets\\js\\editarUsuario.js"
+      "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\Departamentos\\excluirDepartamento.js",
+      "PackagePath": "staticwebassets\\js\\Departamentos\\excluirDepartamento.js"
     },
     {
-      "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\excluirDepartamento.js",
-      "PackagePath": "staticwebassets\\js\\excluirDepartamento.js"
+      "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\Usuarios\\editarUsuario.js",
+      "PackagePath": "staticwebassets\\js\\Usuarios\\editarUsuario.js"
     },
     {
-      "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\excluirUsuario.js",
-      "PackagePath": "staticwebassets\\js\\excluirUsuario.js"
+      "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\Usuarios\\excluirUsuario.js",
+      "PackagePath": "staticwebassets\\js\\Usuarios\\excluirUsuario.js"
     },
     {
       "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\js\\site.js",

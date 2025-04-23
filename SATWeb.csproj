@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Views\Chamados\" />
+      <Folder Include="wwwroot\js\Chamados\" />
     </ItemGroup>
 
 </Project>

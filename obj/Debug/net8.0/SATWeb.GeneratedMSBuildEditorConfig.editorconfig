@@ -26,6 +26,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Raul\Desktop\Senac PI2\SATWeb
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Raul/Desktop/Senac PI2/SATWeb/Views/Chamados/ListarChamados.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbWFkb3NcTGlzdGFyQ2hhbWFkb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Raul/Desktop/Senac PI2/SATWeb/Views/Chamados/NovoChamado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbWFkb3NcTm92b0NoYW1hZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Raul/Desktop/Senac PI2/SATWeb/Views/Departamentos/CadastrarDepartamento.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xDYWRhc3RyYXJEZXBhcnRhbWVudG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
