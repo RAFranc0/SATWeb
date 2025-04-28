@@ -13,7 +13,7 @@ document.getElementById("btnLocalizar").addEventListener("click", function () {
             return res.json();
         })
         .then(data => {
-            document.getElementById("formExcluir").style.display = "block";
+            document.getElementById("formExcluir").style.display = "flex";
             document.getElementById("inputId").value = data.id;
             document.getElementById("campoId").value = data.id;
             document.getElementById("campoNome").value = data.nome;

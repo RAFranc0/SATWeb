@@ -5,36 +5,49 @@
     var departamentos = ViewBag.Departamentos as List<DepartamentoModel>;
 }
 
-<div class="container">
-    <h1 class="mb-4">Editar Departamento</h1>
+<div class="container text-center">
 
-    <div class="mb-3">
-        <label class="form-label">Selecione o departamento</label>
-        <select id="selectDepartamento" class="form-select">
-            <option value="">-- Selecione --</option>
-            @foreach (var dep in departamentos)
-            {
-                <option value="@dep.Id">@dep.Nome</option>
-            }
-        </select>
-    </div>
-    <button id="btnLocalizar" class="btn btn-primary">Localizar</button>
+    <div class="vidro">
 
-    <form id="formEditar" method="post" asp-action="Editar" class="mt-4" style="display:none;">
-        <input type="hidden" name="id" id="inputId" />
-        <div class="mb-3">
-            <label class="form-label">ID</label>
-            <input class="form-control" id="editId" disabled/>
+        <h1 class="display-4 mb-0">@ViewData["Title"]</h1>
+        
+        @* ----------------------------------------- *@
+        @* Campo seletor/localizador de departamento *@
+        @* ----------------------------------------- *@
+
+        <div class="my-2 w-50 seletor-localizar">
+            <label class="form-label">Selecione o departamento</label>
+            <select id="selectDepartamento" class="form-select">
+                <option value="">-- Selecione --</option>
+                @foreach (var dep in departamentos)
+                {
+                    <option value="@dep.Id">@dep.Nome</option>
+                }
+            </select>
+
+            <button id="btnLocalizar" class="btn btn-dark my-3">Localizar</button>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Nome</label>
-            <input class="form-control" id="editNome" asp-for="Nome"/>
-        </div>
-        <button type="submit" class="btn btn-danger">Alterar</button>
-    </form>
 
-    <div id="erro" class="alert alert-danger mt-3" style="display:none;">
-        Ocorreu um erro ao buscar o departamento.
+        @* ------------------------------------ *@
+        @*              Formulario              *@
+        @* ------------------------------------ *@
+
+        <form class="formulario" id="formEditar" method="post" asp-action="Editar" style="display:none;">
+            <input type="hidden" name="id" id="inputId"/>
+            <div class="mb-3">
+                <label class="form-label">ID</label>
+                <input class="form-control" id="editId" disabled/>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nome</label>
+                <input class="form-control" id="editNome" asp-for="Nome"/>
+            </div>
+            <button type="submit" class="btn btn-warning">Atualizar</button>
+        </form>
+
+        <div id="erro" class="alert alert-danger mt-3" style="display:none;">
+            Ocorreu um erro ao buscar o departamento.
+        </div>
     </div>
 </div>
 

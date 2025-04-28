@@ -11,7 +11,7 @@ document.getElementById("btnLocalizar").addEventListener("click", function () {
             return res.json();
         })
         .then(data => {
-            document.getElementById("formEditar").style.display = "block";
+            document.getElementById("formEditar").style.display = "flex";
             document.getElementById("inputId").value = data.id;
             document.getElementById("campoNome").value = data.nome;
             document.getElementById("campoDepartamento").value = data.departamentoId;

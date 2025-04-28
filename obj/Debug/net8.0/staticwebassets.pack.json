@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\SATWeb.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\assets\\icone-logo.png",
+      "PackagePath": "staticwebassets\\assets\\icone-logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\assets\\icone-menu.png",
+      "PackagePath": "staticwebassets\\assets\\icone-menu.png"
+    },
+    {
       "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -259,6 +267,10 @@
     {
       "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\lib\\oldbootstrap.rar",
+      "PackagePath": "staticwebassets\\lib\\oldbootstrap.rar"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SATWeb.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "tHLOkODaIn3PutuX2CxEFyAjVQlbesnwRhi7AsdzkuU=",
+  "Hash": "h3cmvmk9go0os5TXMoTPeILbH7y2FOK6i1ntGiD7PR4=",
   "Source": "SATWeb",
   "BasePath": "_content/SATWeb",
   "Mode": "Default",
@@ -53,6 +53,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\SATWeb.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\assets\\icone-logo.png",
+      "SourceId": "SATWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\",
+      "BasePath": "_content/SATWeb",
+      "RelativePath": "assets/icone-logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\icone-logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\assets\\icone-menu.png",
+      "SourceId": "SATWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\",
+      "BasePath": "_content/SATWeb",
+      "RelativePath": "assets/icone-menu.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\icone-menu.png"
     },
     {
       "Identity": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\css\\site.css",
@@ -1269,6 +1307,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\lib\\oldbootstrap.rar",
+      "SourceId": "SATWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Raul\\Desktop\\Senac PI2\\SATWeb\\wwwroot\\",
+      "BasePath": "_content/SATWeb",
+      "RelativePath": "lib/oldbootstrap.rar",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\oldbootstrap.rar"
     }
   ]
 }

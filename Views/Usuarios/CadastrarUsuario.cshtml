@@ -4,32 +4,31 @@
 }
 
 <div class="container text-center">
-    <h1 class="display-4">Cadastrar Usuario</h1>
-    <form method="post" asp-controller="Usuarios" asp-action="Cadastrar">
-        @Html.AntiForgeryToken()
+    <div class="vidro d-flex justify-content-center align-items-center">
+
+        <h1 class="display-4 mb-0">@ViewData["Title"]</h1>
         
-        <div class="mb-3 row">
-            <label asp-for="Usuario.Nome" class="col-sm-2 col-form-label"></label>
-            <div class="col-sm-10">
-                <input asp-for="Usuario.Nome" class="form-control">
-                <span asp-validation-for="Usuario.Nome" class="text-danger"></span>
-            </div>
-        </div>
+        <form class="formulario" method="post" asp-controller="Usuarios" asp-action="Cadastrar">
+            @Html.AntiForgeryToken()
 
-        <div class="mb-3 row">
-            <label asp-for="Usuario.DepartamentoId" class="col-sm-2 col-form-label">Departamento</label>
-            <div class="col-sm-10">
-                <select asp-for="Usuario.DepartamentoId" asp-items="Model.ListaDepartamentos.Select(d => 
-                    new SelectListItem {
-                        Value = d.Id.ToString(),
-                        Text = d.Nome
-                    })" class="form-select">
-                    <option value="">Selecione...</option>
-                </select>
-                <span asp-validation-for="Usuario.DepartamentoId" class="text-danger"></span>
+            <div class="mb-3">
+                <label asp-for="Usuario.Nome" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="Usuario.Nome" class="form-control">
+                    <span asp-validation-for="Usuario.Nome" class="text-danger"></span>
+                </div>
             </div>
-        </div>
 
-        <button class="btn btn-outline-dark" type="submit">Cadastrar</button>
-    </form>
+            <div class="mb-3">
+                <label asp-for="Usuario.DepartamentoId" class="col-sm-2 col-form-label">Departamento</label>
+                <div class="col-sm-10">
+                    <select asp-for="Usuario.DepartamentoId" asp-items="Model.ListaDepartamentos.Select(d => new SelectListItem { Value = d.Id.ToString(), Text = d.Nome })" class="form-select">
+                        <option value="">Selecione...</option>
+                    </select>
+                    <span asp-validation-for="Usuario.DepartamentoId" class="text-danger"></span>
+                </div>
+            </div>
+            <button class="btn btn-light my-3" type="submit">Cadastrar</button>
+        </form>
+    </div>
 </div>

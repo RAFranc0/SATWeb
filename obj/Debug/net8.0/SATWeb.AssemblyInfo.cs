@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SATWeb")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e083ebc7cd2b3ef651113508d944b617634b6f16")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2142f3d6b4fe77083d4e5cb34cc384731119fc4")]
 [assembly: System.Reflection.AssemblyProductAttribute("SATWeb")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SATWeb")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

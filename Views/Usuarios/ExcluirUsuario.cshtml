@@ -5,40 +5,58 @@
     var usuarios = ViewBag.Usuarios as List<UsuarioModel>;
 }
 
-<div class="container">
-    <h1 class="mb-4">Excluir Usuário</h1>
+<div class="container text-center">
+    
+    <div class="vidro">
 
-    <div class="mb-3">
-        <label class="form-label">Selecione o usuário</label>
-        <select id="selectUsuario" class="form-select">
-            <option value="">-- Selecione --</option>
-            @foreach (var user in usuarios)
-            {
-                <option value="@user.Id">@user.Nome</option>
-            }
-        </select>
-    </div>
-    <button id="btnLocalizar" class="btn btn-primary">Localizar</button>
+        <h1 class="display-4 mb-0">@ViewData["Title"]</h1>
+        
+        @* ------------------------------------ *@
+        @* Campo seletor/localizador de usuário *@
+        @* ------------------------------------ *@
+        
+        <div class="my-2 w-50 seletor-localizar" id="seletor">
+            <label class="form-label">Selecione o usuário</label>
+            <select id="selectUsuario" class="form-select">
+                <option value="">-- Selecione --</option>
+                @foreach (var user in usuarios)
+                {
+                    <option value="@user.Id">@user.Nome</option>
+                }
+            </select>
 
-    <form id="formExcluir" method="post" asp-action="Excluir" class="mt-4" style="display:none;">
-        <input type="hidden" name="id" id="inputId"/>
-        <div class="mb-3">
-            <label class="form-label">ID</label>
-            <input class="form-control" id="campoId" disabled/>
+            <button id="btnLocalizar" class="btn btn-dark my-3">Localizar</button>
         </div>
-        <div class="mb-3">
-            <label class="form-label">Nome</label>
-            <input class="form-control" id="campoNome" disabled/>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Departamento</label>
-            <input class="form-control" id="campoDepartamento" disabled/>
-        </div>
-        <button type="submit" class="btn btn-danger">Excluir</button>
-    </form>
 
-    <div id="erro" class="alert alert-danger mt-3" style="display:none;">
-        Ocorreu um erro ao buscar o usuário.
+        @* ------------------------------------ *@
+        @*              Formulario              *@
+        @* ------------------------------------ *@
+
+        <form id="formExcluir" method="post" asp-action="Excluir" class="formulario" style="display:none;">
+            
+            <input type="hidden" asp-for="Id" id="inputId"/>
+            
+            <div class="mb-3">
+                <label asp-for="Id" class="form-label">ID</label>
+                <input asp-for="Id" class="form-control" id="campoId" disabled/>
+            </div>
+            
+            <div class="mb-3">
+                <label asp-for="Nome" class="form-label">Nome</label>
+                <input asp-for="Nome" class="form-control" id="campoNome" disabled/>
+            </div>
+            
+            <div class="mb-3">
+                <label asp-for="Departamento" class="form-label">Departamento</label>
+                <input asp-for="Departamento" class="form-control" id="campoDepartamento" disabled/>
+            </div>
+            
+            <button type="submit" class="btn btn-danger">Excluir</button>
+        </form>
+
+        <div id="erro" class="alert alert-danger mt-3" style="display:none;">
+            Ocorreu um erro ao buscar o usuário.
+        </div>
     </div>
 </div>
 
