@@ -111,7 +111,7 @@ public class ChamadosController(SatWebDbContext satdb) : Controller
         if (!Enum.IsDefined(typeof(EstadoChamado), reabertura.Estado))
         {
             ModelState.AddModelError("", "Estado inválido. Utilize apenas 'Aberto', 'Reaberto' ou 'Encerrado'");
-            return View("ListarChamados", reabertura); // ou redirecionar de volta
+            return View("ListarChamados", reabertura);
         }
 
         reabertura.Estado = EstadoChamado.Reaberto;

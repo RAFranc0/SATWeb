@@ -116,7 +116,7 @@ public class UsuariosController(SatWebDbContext satdb) : Controller
     [HttpPost]
     public async Task<IActionResult> Editar(EditarUsuarioViewModel viewModel)
     {
-        var usuarioExistente = await satdb.Usuarios.FindAsync(viewModel.Usuario.Id);
+        var usuarioExistente = await satdb.Usuarios.FindAsync(viewModel.Usuario!.Id);
         if (usuarioExistente == null)
         {
             return NotFound();
