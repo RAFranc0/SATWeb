@@ -90,8 +90,10 @@ public class ChamadosController(SatWebDbContext satdb) : Controller
         var viewModel = new AlterarChamadoModel
         {
             TodosChamados = await satdb.Chamados
+                .Include(c => c.Usuario)
+                .Include(d => d.Departamento)
                 .OrderByDescending(c => c.Data)
-                .ToListAsync(),
+                .ToListAsync()
         };
         return View(viewModel);
     }

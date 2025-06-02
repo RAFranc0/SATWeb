@@ -17,12 +17,18 @@
             <div class="col">
                 <div class="card h-100">
                     <div class="card-title my-2 p-2 text-center position-relative">
-                        <h5 class="d-inline-block mb-0" id="titulo-card">Chamado @c.Id</h5>
-                        <span class="indicador-status 
+                        <div>
+                            <h5 class="d-inline-block mb-0" id="titulo-card">Chamado @c.Id</h5>
+
+                            <span class="indicador-status 
                                     @(c.Estado.ToString() == "Aberto" ? "status-aberto" :
-                                                                         c.Estado.ToString() == "Reaberto" ? "status-reaberto" :
-                                                                         "status-encerrado")">
-                        </span>
+                                    c.Estado.ToString() == "Reaberto" ? "status-reaberto" :
+                                    "status-encerrado")">
+                            </span>
+                        </div>
+
+
+                        <small class="text-muted"> @c.Usuario.Nome [@c.Departamento.Nome] </small>
                     </div>
                     <div class="card-body mh-100 p-2 bg-light rounded overflow-auto">
                         <div class="card-text"
