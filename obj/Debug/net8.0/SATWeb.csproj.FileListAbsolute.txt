@@ -32,6 +32,8 @@ C:\Users\Raul\Desktop\Senac PI2\SATWeb\bin\Debug\net8.0\Microsoft.Extensions.Log
 C:\Users\Raul\Desktop\Senac PI2\SATWeb\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\Raul\Desktop\Senac PI2\SATWeb\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 C:\Users\Raul\Desktop\Senac PI2\SATWeb\bin\Debug\net8.0\Mono.TextTemplating.dll
+C:\Users\Raul\Desktop\Senac PI2\SATWeb\bin\Debug\net8.0\Npgsql.dll
+C:\Users\Raul\Desktop\Senac PI2\SATWeb\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\Raul\Desktop\Senac PI2\SATWeb\bin\Debug\net8.0\SQLitePCLRaw.batteries_v2.dll
 C:\Users\Raul\Desktop\Senac PI2\SATWeb\bin\Debug\net8.0\SQLitePCLRaw.core.dll
 C:\Users\Raul\Desktop\Senac PI2\SATWeb\bin\Debug\net8.0\SQLitePCLRaw.provider.e_sqlite3.dll

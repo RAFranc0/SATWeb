@@ -10,7 +10,7 @@ public class SatWebDbContext : DbContext
     }
     
     protected override void OnConfiguring(DbContextOptionsBuilder options)
-        => options.UseSqlite("Data Source=sat.db");
+        => options.UseNpgsql("Host=yamanote.proxy.rlwy.net;Port=50520;Username=postgres;Password=WdVJDXiHvlxDptnxyMAyVOpQHvwxaPTe;Database=railway;Pooling=true;SSL Mode=Require;Trust Server Certificate=true;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
