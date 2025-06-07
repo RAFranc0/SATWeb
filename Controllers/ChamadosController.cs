@@ -46,7 +46,7 @@ public class ChamadosController(SatWebDbContext satdb) : Controller
 
             var novoChamado = new ChamadoModel
             {
-                Data = DateTime.Now,
+                Data = DateTime.UtcNow,
                 Estado = EstadoChamado.Aberto,
                 UsuarioId = aberturaChamado.UsuarioSelecionadoId,
                 DepartamentoId = usuarioSelecionado.DepartamentoId,
@@ -73,7 +73,7 @@ public class ChamadosController(SatWebDbContext satdb) : Controller
     private string FormatarDescricaoChamado(string descricao)
     {
         var sb = new StringBuilder();
-        sb.AppendLine($"{EstadoChamado.Aberto} em {DateTime.Now:dd/MM/yyyy HH:mm}")
+        sb.AppendLine($"{EstadoChamado.Aberto} em {DateTime.UtcNow:dd/MM/yyyy HH:mm}")
             .AppendLine("*** Descrição ***")
             .AppendLine(descricao);
 
